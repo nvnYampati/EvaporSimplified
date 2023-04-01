@@ -1,0 +1,77 @@
+a{
+    cursor:pointer;
+}
+article:hover {
+    box-shadow: 20px 20px 50px grey;
+    border-radius: 1rem;
+    transition-duration: 1s;
+}
+.rectangular {
+    /* position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 320px;
+    height: auto;
+    max-height: 320px; */
+    box-shadow: 20px 20px 50px grey;
+}
+.circular {
+    border-radius: 50%;
+    width: 33%;
+    /* max-width: 96px; */
+    height: auto;
+}
+.dpSpan{
+    position: relative;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 1;
+}
+.badgeConfig{
+    background-color:  #f9d019;
+    border-radius:  var(--slds-c-badge-radius-border, 5rem);
+    border: 5px;
+    color:  #8f6c6c;
+    position: relative;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 2;
+    cursor: pointer;
+  }
+.nameClass{
+    color: rgb(67, 99, 144);
+    position: relative;
+    left: 2rem;
+    cursor:pointer;
+}
+.likeButton{
+    border-radius : 50%;
+    size: 4rem;
+    position: relative;
+    top: 5rem;
+    float: right;
+    z-index: 3;
+    
+}
+.likeButton:hover{
+    border-radius : 50%;
+    color: rgb(191, 137, 147);
+}
+.likeButton:disabled{
+    border-radius : 50%;
+    color: rgb(191, 137, 147);
+}
+.instituteName {
+    cursor: pointer;
+}
+
+/* .badgeConfig{
+    background-color: var(--slds-c-badge-color-background, #f9d019);
+    border-radius: var(--slds-c-badge-radius-border, 5rem);
+    color: var(--slds-c-badge-text-color, #080707);
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 2;
+  } */

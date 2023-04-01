@@ -1,0 +1,25 @@
+<template>
+    <article class="slds-card ">
+        <lightning-input
+        name="enter-search" class="slds-align_absolute-center slds-size_1-of-2 slds-p-bottom_large"
+        label="Search Course" placeholder="Enter a course name" onchange={handleSearch}
+        type="search" value={searchKey}
+        ></lightning-input>
+
+        <template if:true={courseList}>
+            <div class="slds-grid slds-wrap"> 
+            <template for:each={courseList.data} for:item="course">
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-3 slds-large-size_1-of-4" key={course.Id}>
+                    <c-course-tile course-item = {course}>
+                    </c-course-tile>
+                </div>
+                </template>
+
+            </div>
+        </template>
+        
+        <template if:false={courseList}>
+            No Courses Found
+        </template>
+    </article>
+</template>

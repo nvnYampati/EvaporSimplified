@@ -1,0 +1,36 @@
+<template>
+    <p hidden>isLiked : {isLiked}</p>
+    <!-- <template if:true={isLiked}></template> -->
+    <article class="slds-card__body slds-card__body_inner slds-p-around_medium">
+        <!-- isLiked : {isLiked} -->
+        <img class="rectangular" src={courseItem.CoverPicture__c} alt="Rectangular Image" />
+        <a onclick={handleDPClick}>
+            <!-- <img class="circular" src={courseItem.DP} alt="Circular Image" /> -->
+            <span class="dpSpan">
+                <img class="circular" alt={courseItem.Institution__r.Name} src={courseItem.DisplayPicture__c} title={courseItem.Institution__r.Name} />
+            </span>
+        </a>
+
+        <span class="slds-float_right badgeConfig">
+            <lightning-formatted-number value={courseItem.Fee__c} format-style="currency" 
+            currency-code="USD" currency-display-as="symbol">
+            </lightning-formatted-number>
+        </span>
+
+        <!-- <button class="slds-button likeButton" title="Add to Favourites" onclick={handleLike}> -->
+            <lightning-icon icon-name={likeIcon} alternative-text="Connected" title={likeTip}
+            size="small" onclick={handleLike} class="likeButton">
+            </lightning-icon>
+        <!-- </button> -->
+
+        <div >
+            <p class="slds-text-heading_medium nameClass" onclick={handleCourseClick}>{courseItem.Name}</p>
+
+            <p class="slds-text-title_caps slds-m-top_x-small instituteName"
+            onclick={handleInstitute}
+            >{courseItem.Institution__r.Name}</p>
+
+        </div>
+        <!-- </div>   -->
+    </article>
+</template>

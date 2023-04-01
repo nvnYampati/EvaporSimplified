@@ -1,0 +1,32 @@
+<template>
+    <article class="slds-card__body slds-card__body_inner slds-p-around_medium">
+
+        <img class="rectangular" src={courseWrap.CoverPicture} alt="Rectangular Image" />
+
+        <a onclick={handleDPClick}>
+            <span class="dpSpan">
+                <img class="circular" alt={courseWrap.InstitutionName} src={courseWrap.DisplayPicture} title={courseWrap.InstitutionName} />
+            </span>
+        </a>
+
+        <span class="slds-float_right badgeConfig">
+            <lightning-formatted-number value={courseWrap.Fee} format-style="currency" 
+            currency-code="USD" currency-display-as="symbol">
+            </lightning-formatted-number>
+        </span>
+
+        <a onclick={handleFavourite}>
+            <lightning-icon icon-name={favIcon} alternative-text="Connected" title={likeTip}
+            size="small"  class="likeButton">
+            </lightning-icon>
+        </a>
+
+        <div >
+            <p class="slds-text-heading_medium nameClass" onclick={handleCourseClick}>{courseWrap.Name}</p>
+            <p class="slds-text-title_caps slds-m-top_x-small instituteName"
+            onclick={handleInstitute}
+            >{courseWrap.InstitutionName}</p>
+        </div>
+
+    </article>
+</template>
